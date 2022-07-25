@@ -36,4 +36,15 @@ export const likeBlog = function (id) {
     )
 }
 
+export const createBlog = function (initBlogData) {
+    return axios(
+        {
+            method: 'post',
+            url: API,
+            headers: {"Authorization": `Bearer ${API_TOKEN}`},
+            data: initBlogData,
+        }
+    )
+}
+
 

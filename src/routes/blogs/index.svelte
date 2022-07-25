@@ -47,7 +47,15 @@
     await likeBlog(blogs[i].id);
     blogs[i].like += 1;
   };
+
+  const create = function () {
+    goto("blogs/create");
+  };
 </script>
+
+<button on:click={create}
+  >gatau cara tengahin gimana but create new blog here</button
+>
 
 {#await profilesPromise}
   <p>.. wait</p>
