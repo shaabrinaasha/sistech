@@ -9,12 +9,13 @@
 
   const start = async function () {
     const blogsResponses = await getBlog();
-    console.log(blogsResponses);
+    // console.log(blogsResponses);
     const blogData = blogsResponses.data;
     for (var i = 0; i < blogData.length; i++) {
       blogData[i].isUpdate = 0;
       blogData[i].newTitle = "";
       blogData[i].newContent = "";
+      blogData[i].disabled = false;
     }
     blogs = blogsResponses.data;
   };
@@ -44,6 +45,7 @@
   };
 
   const like = async function (i) {
+    blogs[i].disabled = true;
     await likeBlog(blogs[i].id);
     blogs[i].like += 1;
   };
@@ -66,7 +68,9 @@
         <h1>{blog.title}</h1>
         <p>{blog.content}</p>
         <button on:click={() => update(i)}>Update</button>
-        <button on:click={() => like(i)}>Like ({blog.like})</button>
+        <button disabled={blog.disabled} on:click={() => like(i)}
+          >Like ({blog.like})</button
+        >
       {:else}
         <label for="name">Title</label> <br />
         <input
