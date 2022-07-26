@@ -55,38 +55,57 @@
   };
 </script>
 
-<button on:click={create}
-  >gatau cara tengahin gimana but create new blog here</button
->
-
 {#await profilesPromise}
   <p>.. wait</p>
 {:then _}
+  <div class="text-center">
+    <button type="button" class="btn btn-dark" on:click={create}
+      >Create New Blog</button
+    >
+  </div>
   {#each blogs as blog, i}
-    <div style="border: 3px solid lightblue; margin: 20px; padding: 20px">
+    <div
+      class="container"
+      style="background-color:#EAF4E0; margin: 20px; padding: 20px"
+    >
       {#if !blog.isUpdate}
         <h1>{blog.title}</h1>
         <p>{blog.content}</p>
-        <button on:click={() => update(i)}>Update</button>
-        <button disabled={blog.disabled} on:click={() => like(i)}
-          >Like ({blog.like})</button
+        <button
+          type="button"
+          class="btn btn-secondary"
+          on:click={() => update(i)}>Update</button
+        >
+        <button
+          type="button"
+          class="btn btn-light"
+          disabled={blog.disabled}
+          on:click={() => like(i)}>Like ({blog.like})</button
         >
       {:else}
         <label for="name">Title</label> <br />
         <input
-          bind:value={blogs[i].newTitle}
+          class="form-control"
           type="text"
+          bind:value={blogs[i].newTitle}
           id="title"
           name="title"
         /><br />
         <label for="desc">Content</label><br />
         <textarea
+          class="form-control"
           bind:value={blogs[i].newContent}
           id="content"
           name="content"
         /><br />
-        <button on:click={() => cancel(i)}>Cancel</button>
-        <button on:click={() => submit(i)}>Submit</button>
+        <button type="button" class="btn btn-danger" on:click={() => cancel(i)}
+          >Cancel</button
+        >
+        <button
+          type="button"
+          class="btn btn-secondary"
+          on:click={() => submit(i)}>Submit</button
+        >
       {/if}
     </div>
   {/each}
