@@ -4,6 +4,7 @@
 </nav> -->
 <script>
   import flower from "$lib/assets/profile/flower-icon.svg";
+  import profpic from "$lib/assets/profile/shasa.png";
 </script>
 
 <nav

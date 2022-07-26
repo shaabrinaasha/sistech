@@ -9,6 +9,7 @@ export const getBlog = function () {
         method: 'get',
         url: API,
         headers : {"Authorization": `Bearer ${API_TOKEN}`},
+        timeout: 10000,
       });
 
 } 
