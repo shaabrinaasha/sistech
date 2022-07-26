@@ -4,7 +4,7 @@ This is a website for Ristek's Sistech technical task on SE
 
 ## How to run
 
-If you're seeing this, you've probably already done this step. Congrats!
+First you need npm installed, then
 
 ```bash
 # install dependencies
