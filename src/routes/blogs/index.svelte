@@ -64,10 +64,7 @@
     >
   </div>
   {#each blogs as blog, i}
-    <div
-      class="container"
-      style="background-color:#EAF4E0; margin: 20px; padding: 20px"
-    >
+    <div style="background-color:#F9DCDC; margin: 20px; padding: 20px">
       {#if !blog.isUpdate}
         <h1>{blog.title}</h1>
         <p>{blog.content}</p>

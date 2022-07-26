@@ -1,0 +1,9 @@
+#layout {
+    background-color: #F9DCDC;
+    height: 400px;
+}
+
+#isi-layout {
+    align-items: center;
+    justify-content: center;
+}
