@@ -1,7 +1,7 @@
 <script>
   import profpic from "$lib/assets/profile/shasa.png";
   import betis from "$lib/assets/profile/betis.png";
-  import compfest from "$lib/assets/profile/compfest.jpg";
+  import compfest from "$lib/assets/profile/compfest.png";
   import perak from "$lib/assets/profile/perak.png";
 </script>
 

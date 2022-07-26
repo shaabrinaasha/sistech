@@ -58,7 +58,7 @@
 {#await profilesPromise}
   <p>.. wait</p>
 {:then _}
-  <div class="text-center">
+  <div class="text-center my-5">
     <button type="button" class="btn btn-dark" on:click={create}
       >Create New Blog</button
     >
