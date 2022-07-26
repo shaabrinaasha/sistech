@@ -6,8 +6,11 @@
   import flower from "$lib/assets/profile/flower-icon.svg";
 </script>
 
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light">
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  style="background-color: #E39B90"
+>
+  <div class="container">
     <a class="navbar-brand" href="/">
       <img src={flower} width="30" height="30" alt="" />
     </a>
@@ -32,5 +35,5 @@
         </li>
       </ul>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
