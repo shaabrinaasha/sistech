@@ -73,4 +73,8 @@
     height: 300px;
     width: 300px;
   }
+
+  h2 {
+    margin-bottom: 30px;
+  }
 </style>
